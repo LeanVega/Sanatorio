@@ -1,17 +1,42 @@
 package sanatorio;
 
-public abstract class Paciente {
-    protected String dni;
-    protected String nombre;
-    protected String obraSocial;
+public class Paciente {
+    private String nombre;
+    private String dni;
+    private String obraSocial;
 
-    public Paciente(String dni, String nombre, String obraSocial) {
-        this.dni = dni;
+    public Paciente(String nombre, String dni, String obraSocial) {
         this.nombre = nombre;
+        this.dni = dni;
         this.obraSocial = obraSocial;
     }
 
-    public abstract String getCoberturaObraSocial();
-    public abstract double getDescuento();
-    public abstract String getVademecum();
+    // Getters y setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getObraSocial() {
+        return obraSocial;
+    }
+
+    public void setObraSocial(String obraSocial) {
+        this.obraSocial = obraSocial;
+    }
+
+    public String obtenerInformacion() {
+        return "Nombre: " + nombre + "\nDNI: " + dni + "\nCobertura OS: " + obraSocial;
+    }
 }

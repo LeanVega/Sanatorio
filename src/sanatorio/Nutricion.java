@@ -1,11 +1,16 @@
 package sanatorio;
 
 public class Nutricion {
-    public static void recomendarDieta(Paciente paciente) {
+
+    public void obtenerDietaPaciente(Paciente paciente) {
         if (paciente instanceof Pediatrico) {
-            System.out.println("Dieta recomendada (Pediátrico): " + ((Pediatrico) paciente).getDieta());
+            Pediatrico pediatrico = (Pediatrico) paciente;
+            System.out.println("Dieta recomendada (Pediátrico): " + pediatrico.getDieta());
         } else if (paciente instanceof Internado) {
-            System.out.println("Dieta recomendada (Internado): " + ((Internado) paciente).getDieta());
+            Internado internado = (Internado) paciente;
+            System.out.println("Dieta recomendada (Internado): " + internado.getDieta());
+        } else {
+            System.out.println("El paciente no tiene dieta recomendada.");
         }
     }
 }

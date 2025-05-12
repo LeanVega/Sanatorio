@@ -1,37 +1,55 @@
 package sanatorio;
 
 public class Internado extends Paciente {
+
     private String habitacion;
-    private int presionArterial;
-    private String rh;
+    private double PA;
+    private String Rh;
+    private String dieta;
 
-    public Internado(String dni, String nombre, String obraSocial, String habitacion, int presionArterial, String rh) {
-        super(dni, nombre, obraSocial);
+    public Internado(String nombre, String dni, String obraSocial, String habitacion, double PA, String Rh, String dieta) {
+        super(nombre, dni, obraSocial);
         this.habitacion = habitacion;
-        this.presionArterial = presionArterial;
-        this.rh = rh;
+        this.PA = PA;
+        this.Rh = Rh;
+        this.dieta = dieta;
     }
 
-    @Override
-    public String getCoberturaObraSocial() {
-        return obraSocial + " - Plan Internación";
+    // Getters y setters
+    public String getHabitacion() {
+        return habitacion;
     }
 
-    @Override
-    public double getDescuento() {
-        return 20.0;
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
     }
 
-    @Override
-    public String getVademecum() {
-        return "Antibióticos, Analgésicos, Anticoagulantes";
+    public double getPA() {
+        return PA;
+    }
+
+    public void setPA(double PA) {
+        this.PA = PA;
+    }
+
+    public String getRh() {
+        return Rh;
+    }
+
+    public void setRh(String Rh) {
+        this.Rh = Rh;
     }
 
     public String getDieta() {
-        return "Dieta hiposódica y controlada";
+        return dieta;
     }
 
-    public String getEstudios() {
-        return "Rx de abdomen, Perfil hepático";
+    public void setDieta(String dieta) {
+        this.dieta = dieta;
+    }
+
+    @Override
+    public String obtenerInformacion() {
+        return super.obtenerInformacion() + "\nHabitación: " + habitacion + "\nP.A: " + PA + "\nRh: " + Rh + "\nDieta: " + dieta;
     }
 }
