@@ -13,7 +13,7 @@ public class Adulto extends Paciente {
         this.peso = peso;
     }
 
-    // Getters y setters
+    // Gttss y sts
     public double getPA() {
         return PA;
     }

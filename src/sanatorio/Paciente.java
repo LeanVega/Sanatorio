@@ -11,7 +11,7 @@ public class Paciente {
         this.obraSocial = obraSocial;
     }
 
-    // Getters y setters
+    // gtts y sts
     public String getNombre() {
         return nombre;
     }

@@ -15,7 +15,7 @@ public class Internado extends Paciente {
         this.dieta = dieta;
     }
 
-    // Getters y setters
+    // gtts y sts
     public String getHabitacion() {
         return habitacion;
     }

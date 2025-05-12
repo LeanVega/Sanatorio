@@ -5,17 +5,17 @@ public class Pediatrico extends Paciente {
     private double peso;
     private String celular;
     private String tutor;
-    private String dieta;  // Asegúrate de que dieta esté aquí
+    private String dieta; 
 
     public Pediatrico(String nombre, String dni, String obraSocial, double peso, String celular, String tutor, String dieta) {
         super(nombre, dni, obraSocial);
         this.peso = peso;
         this.celular = celular;
         this.tutor = tutor;
-        this.dieta = dieta;  // Inicializamos dieta en el constructor
+        this.dieta = dieta; 
     }
 
-    // Getters y setters
+    //
     public double getPeso() {
         return peso;
     }
@@ -41,7 +41,7 @@ public class Pediatrico extends Paciente {
     }
 
     public String getDieta() {
-        return dieta;  // Asegúrate de que este getter exista
+        return dieta; 
     }
 
     public void setDieta(String dieta) {
